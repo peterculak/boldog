@@ -2,10 +2,9 @@ version: '3'
 
 services:
   db:
-#    image: mysql:8.0
     build:
       context: .
-      dockerfile: Dockerfile-db
+      dockerfile: Dockerfile.db
     container_name: db
     restart: unless-stopped
     env_file: .env
