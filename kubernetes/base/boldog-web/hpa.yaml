@@ -1,0 +1,10 @@
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: boldog-web
+spec:
+  scaleTargetRef:
+    apiVersion: extensions/v1beta1
+    kind: Deployment
+    name: boldog-web
+  targetCPUUtilizationPercentage: 100

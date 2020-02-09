@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: boldog-web
+spec:
+  rules:
+    - host: jazeroboldog.sk
+      http:
+        paths:
+          - backend:
+              serviceName: boldog-web
+              servicePort: web
+            path: /

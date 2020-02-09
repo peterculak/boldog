@@ -1,0 +1,12 @@
+# Base configuration
+# Not usable as is, needs an environment overlay
+
+# apiVersion and kind of Kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - boldog-web/deployment.yaml
+  - boldog-web/hpa.yaml
+  - boldog-web/ingress.yaml
+  - boldog-web/service.yaml

@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: boldog-web
+  namespace: boldog
+  labels:
+    app: boldog-web
+  annotations:
+    fluxcd.io/automated: "true"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: boldog-web
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 33%
+  template:
+    metadata:
+      labels:
+        app: boldog-web
+    spec:
+      containers:
+        - name: boldog-web
+          image: fr0z3nk0/boldogweb:latest
+          ports:
+            - containerPort: 80

@@ -1,0 +1,14 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: boldog-web
+  namespace: boldog
+spec:
+  template:
+    spec:
+      $setElementOrder/containers:
+      - name: boldog-web
+      containers:
+      - image: fr0z3nk0/boldogweb:latest
+        name: boldog-web
