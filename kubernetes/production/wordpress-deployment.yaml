@@ -58,6 +58,8 @@ spec:
             secretKeyRef:
               name: mysql-pass
               key: password
+        - name: WORDPRESS_DB_NAME
+          value: "boldogweb"
         ports:
         - containerPort: 80
           name: wordpress
