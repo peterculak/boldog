@@ -1,0 +1,3 @@
+FROM mysql:8.0
+COPY ./boldogweb.sql /tmp
+RUN cp /tmp/boldogweb.sql /docker-entrypoint-initdb.d
