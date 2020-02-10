@@ -1,4 +1,6 @@
 -- !!! NEEDS TO HAVE USE database !!! ---
+CREATE DATABASE boldogweb;
+
 USE `boldogweb`;
 -- !!!!!!!!!!!!!!!!!!!!!!!!!!!! ---
 
