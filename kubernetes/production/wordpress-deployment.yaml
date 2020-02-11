@@ -50,3 +50,17 @@ spec:
         ports:
         - containerPort: 80
           name: wordpress
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: boldog
+spec:
+  rules:
+    - host: jazeroboldog.sk
+      http:
+        paths:
+          - backend:
+              serviceName: wordpress
+              servicePort: web
+            path: /
