@@ -13,6 +13,7 @@ class RWMB_Map_Field extends RWMB_Field {
 	 * Enqueue scripts and styles.
 	 */
 	public static function admin_enqueue_scripts() {
+	    return;
 		wp_enqueue_style( 'rwmb-map', RWMB_CSS_URL . 'map.css', array(), RWMB_VER );
 
 		/**
@@ -159,6 +160,7 @@ class RWMB_Map_Field extends RWMB_Field {
 	 * @return string
 	 */
 	public static function render_map( $location, $args = array() ) {
+	    return '';
 		list( $latitude, $longitude, $zoom ) = explode( ',', $location . ',,' );
 		if ( ! $latitude || ! $longitude ) {
 			return '';

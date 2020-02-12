@@ -64,7 +64,12 @@ $footer_social_icon_html = propper_return_theme_option( 'footer_social_icon_html
             </div>
         </div>
         <div class="background-wrapper">
-            <div class="map" id="map"></div>
+            <div class="map" id="map">
+              <a href="https://www.google.com/maps/place/925+26+Boldog/@48.1993361,17.2904371,11.86z/data=!4m5!3m4!1s0x476c9c5626b9cc11:0x95cbbf29ca449431!8m2!3d48.2376422!4d17.4292646"
+                 target="_blank">
+                <img src="https://jazeroboldog.sk/wp-content/uploads/2020/03/map.jpg" alt="Dom Jazero Boldog">
+              </a>
+            </div>
         </div>
     </footer>
 </div>
@@ -99,22 +104,10 @@ $footer_social_icon_html = propper_return_theme_option( 'footer_social_icon_html
 ?>
 <?php 
 
-$map_api = propper_return_theme_option( 'map_api');
-$map_lat = propper_return_theme_option( 'map_lat');
-$map_long = propper_return_theme_option( 'map_long');
-$map_theme = propper_return_theme_option( 'map_theme');
-
 wp_footer(); 
 
 ?>
 
-<script type="text/javascript">
-    var latitude = <?php echo $map_lat ?>;
-    var longitude = <?php echo $map_long ?>;
-    var markerImage = "<?php echo get_template_directory_uri();?>/images/map-marker-w.png";
-    var mapTheme = "<?php echo $map_theme ?>";
-    google.maps.event.addDomListener(window, 'load', simpleMap(latitude, longitude, markerImage, mapTheme));
-</script>
 </body>
 
 </html>

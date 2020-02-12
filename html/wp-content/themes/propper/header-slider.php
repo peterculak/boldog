@@ -26,9 +26,6 @@
 		<nav class="navigation <?php if($propper_nav_button == '1'){ echo 'nav-btn-only';}?> background-is-dark ">
             <div class="container">
                 <div class="wrapper">
-                    <div class="left">
-                        <?php propper_the_custom_logo(); ?>
-                    </div>
         
 					<?php get_template_part('menu-section'); ?>
 				

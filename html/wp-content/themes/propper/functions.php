@@ -117,8 +117,6 @@ add_action( 'widgets_init', 'propper_widgets_init' );
  */
 function propper_scripts() {
 
-	$map_api = propper_return_theme_option( 'map_api');
-	
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'jquery-validate', get_template_directory_uri() . '/js/jquery.validate.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'owl-carousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array(), '20151215', true );
@@ -129,7 +127,6 @@ function propper_scripts() {
 	wp_enqueue_script( 'pace', get_template_directory_uri() . '/js/pace.min.js', array(), '20151215', true );
 	
 
-	wp_enqueue_script( 'propper-mapAPI', esc_url('https://maps.googleapis.com/maps/api/js?key='.$map_api));
 	wp_enqueue_script( 'propper-custom', get_template_directory_uri() . '/js/custom.js', array(), '20151215', true );
 	
 	$translation_array = array( 'templateUrl' => get_stylesheet_directory_uri() );

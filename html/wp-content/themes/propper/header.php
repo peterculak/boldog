@@ -25,11 +25,6 @@
 		<nav class="navigation background-is-dark">
             <div class="container">
                 <div class="wrapper">
-                    <div class="left">
-                        <div class="propper-logo">
-                            <?php propper_the_custom_logo(); ?>
-                        </div>
-                    </div>
         
 					<?php get_template_part('menu-section'); ?>
 				

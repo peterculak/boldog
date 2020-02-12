@@ -26,9 +26,7 @@
 		<nav class="navigation nav-btn-only background-is-dark">
             <div class="container">
                 <div class="wrapper">
-                    <div class="left">
-                        <?php propper_the_custom_logo(); ?>
-                    </div>
+
 				 </div>
             </div>
         </nav>
